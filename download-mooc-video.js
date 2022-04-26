@@ -68,6 +68,13 @@ for (i = 0; i < vunits.length; i++) {
 let text = tarray.join('\n');
 console.log(text);
 
+// 附件下载地址
+funits = units.filter(u=>u.contentType==4);
+fu = funits.map(o=>JSON.parse(o.jsonContent))
+urls = fu.map(o=>return 'https://www.icourse163.org/course/attachment.htm?fileName=' + encodeURIComponent(o.fileName) + '&nosKey=' + o.nosKey)
+allurls = urls.join('\r\n');
+console.log(allurls);
+
 
 
 

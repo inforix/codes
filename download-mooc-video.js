@@ -45,6 +45,7 @@ let chapters = json.result.mocTermDto.chapters;
 let units = [];
 chapters.forEach(c => {
   let chaptername = c.name;
+  c.lessons = c.lessons || [];
   c.lessons.forEach(l => {
     let lessonname = l.name;
     units = units.concat(l.units);
